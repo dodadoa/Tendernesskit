@@ -9,14 +9,15 @@ const FrontPageBackground = styled.div`
   top: 0;
   left: 0;
   margin: 0;
-  background: radial-gradient(circle at 90.16% 4.82%, #FFFABC, transparent 30%),
-  radial-gradient(circle at 59.38% 74.69%, #FBE3BF, transparent 40%),
-  radial-gradient(circle at 50.21% 95.49%, #FBE3BF, transparent 20%),
-  radial-gradient(circle at 40.21% 23.36%, #FFFFEF, transparent 50%),
-  radial-gradient(circle at 28.91% 73.67%, #F6D5C8, transparent 50%),
-  radial-gradient(circle at 5.31% 82.99%, #F6D5C8, transparent 60%),
-  radial-gradient(circle at 78.28% 65.06%, #FFFCDD, transparent 100%),
-  radial-gradient(circle at 50% 50%, #ffffff, #ffffff 100%);
+  background: radial-gradient(circle at 8.12% 93.78%, #E0D8D3, transparent 30%),
+  radial-gradient(circle at 95.77% 95.11%, #E1E8C6, transparent 30%),
+  radial-gradient(circle at 99.54% 4.22%, #CFACB1, transparent 70%),
+  radial-gradient(circle at 9.15% 14.22%, #CCFFC7, transparent 80%),
+  radial-gradient(circle at 66.7% 87.78%, #E1E8C6, transparent 30%),
+  radial-gradient(circle at 50% 50%, #fffcfc, #fffcfc 100%);
+  width: 100%;
+  height: 100%;
+  position: absolute; 
 `
 
 const HomeEnterWrapper = styled.div`
@@ -33,7 +34,10 @@ const HomeEnterWrapper = styled.div`
 const HomeText = styled.p`
   font-size: 20px;
   font-family: serif;
-  margin-top: 5px;
+  position: relative;
+  left: calc(50% + 100px);
+  top: calc(50% - 200px);
+  color: white;
 `
 
 export default function Home() {
@@ -53,12 +57,12 @@ export default function Home() {
           height={100}
           placeholder="fixed"
         />
-        {
-          showText && (
-            <HomeText> Home </HomeText>
-          )
-        }
       </HomeEnterWrapper>
+      {
+        showText && (
+          <HomeText> Home </HomeText>
+        )
+      }
     </FrontPageBackground>
   )
 }
