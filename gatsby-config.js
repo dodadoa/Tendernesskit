@@ -13,6 +13,12 @@ module.exports = {
         ],
         display: 'swap'
       }
+    },
+    {
+      resolve: 'gatsby-plugin-page-transitions',
+      options: {
+        transitionTime: 500
+      }
     }
   ],
 }
