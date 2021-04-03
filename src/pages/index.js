@@ -31,17 +31,25 @@ const HomeEnterWrapper = styled.div`
   }
 `
 
-const HomeText = styled.p`
-  font-size: 20px;
-  font-family: serif;
+const HomeTextWrapper = styled.div`
+  width: 400px;
   position: relative;
   left: calc(50% + 100px);
-  top: calc(50% - 200px);
-  color: white;
+  top: calc(50% - 180px);
 `
 
-export default function Home() {
+const HomeText = styled.p`
+  font-size: 16px;
+  color: white;
+  font-family: 'Spectral';
+`
 
+const HOME_HOVER_TEXT_CONTENT =`tenderness kit`
+const HOME_HOVER_TEXT_CONTENT_2 = `A collection of meditations, mediations, conjurings,
+and reflections on being together, while apart in Karachi.`
+const HOME_HOVER_TEXT_CONTENT_3 = `A gathering, housed in a downloadable zipped folder.`
+
+const Home = () => {
   const [showText, setShowText] = useState(false);
 
   return (
@@ -53,16 +61,22 @@ export default function Home() {
         <StaticImage
           src="../images/home_enter.png"
           alt="Enter the world"
-          width={100}
-          height={100}
+          width={90}
+          height={115}
           placeholder="fixed"
         />
       </HomeEnterWrapper>
       {
         showText && (
-          <HomeText> Home </HomeText>
+          <HomeTextWrapper>
+            <HomeText> {HOME_HOVER_TEXT_CONTENT} </HomeText>
+            <HomeText> {HOME_HOVER_TEXT_CONTENT_2} </HomeText>
+            <HomeText> {HOME_HOVER_TEXT_CONTENT_3} </HomeText>
+          </HomeTextWrapper>
         )
       }
     </FrontPageBackground>
   )
 }
+
+export default Home;
