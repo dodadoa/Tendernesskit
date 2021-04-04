@@ -39,17 +39,12 @@ const AboutText = styled.p`
   position: relative;
   top: -80px;
   left: 30px;
-
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Old versions of Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version, currently */
 `
 
 const AboutWrapper = styled.div`
+margin: 0;
   width: 135px;
+  height: 100px;
   position: relative;
   left: 330px;
   top: -250px;
@@ -58,8 +53,30 @@ const AboutWrapper = styled.div`
   }
 `
 
+const BioWrapper = styled.div`
+  margin: 0;
+  width: 85px;
+  height: 100px;
+  position: relative;
+  left: 10px;
+  top: -380px;
+  &:hover {
+    cursor: pointer;
+  }
+`
+const BioText = styled.p`
+  font-size: 14px;
+  font-style: italic;
+  color: #97e384;
+  font-family: 'Spectral';
+  position: relative;
+  top: -60px;
+  left: 20px;
+`
+
 const FishGarden = () => {
-  const [aboutText, setShowAboutText] = useState(false)
+  const [aboutText, setShowAboutText] = useState(true)
+  const [bioText, setShowBioText] = useState(false)
 
   return (
     <PageTransition>
@@ -89,6 +106,23 @@ const FishGarden = () => {
               )
             }
           </AboutWrapper>
+          <BioWrapper
+            onMouseOver={() => setShowBioText(true)}
+            onMouseLeave={() => setShowBioText(false)}
+          >
+            <StaticImage
+              src="../images/bio.png"
+              alt="bio"
+              width={85}
+              height={100}
+              placeholder="fixed"
+            />
+            {
+              bioText  && (
+                <BioText>Bio</BioText>
+              )
+            }
+          </BioWrapper>
         </FishGardenWrapper>
       </Background>
     </PageTransition>
