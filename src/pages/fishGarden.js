@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import styled from "@emotion/styled"
 import PageTransition from 'gatsby-plugin-page-transitions'
+import { StaticImage } from "gatsby-plugin-image"
 
 const Background = styled.div`
   position: absolute;
@@ -23,14 +24,72 @@ const Background = styled.div`
     radial-gradient(circle at 82.14% 94.57%, #8D8387, transparent 30%),
     radial-gradient(circle at 58.28% 32.99%, #D1D4DE, transparent 30%),
     radial-gradient(circle at 50% 50%, #ffffff, #ffffff 100%);
+`
 
+const FishGardenWrapper = styled.div`
+  position: absolute;
+  top: calc(50% - 150px);
+  left: calc(50%);
+`
+const AboutText = styled.p`
+  font-size: 14px;
+  font-style: italic;
+  color: #97e384;
+  font-family: 'Spectral';
+  position: relative;
+  top: -80px;
+  left: 30px;
+
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently */
+`
+
+const AboutWrapper = styled.div`
+  width: 135px;
+  position: relative;
+  left: 330px;
+  top: -250px;
+  &:hover {
+    cursor: pointer;
+  }
 `
 
 const FishGarden = () => {
+  const [aboutText, setShowAboutText] = useState(false)
+
   return (
     <PageTransition>
       <Background>
-
+        <FishGardenWrapper>
+          <StaticImage
+            src="../images/fish_garden.png"
+            alt="fish garden"
+            width={530}
+            height={380}
+            placeholder="fixed"
+          />
+          <AboutWrapper
+            onMouseOver={() => setShowAboutText(true)}
+            onMouseLeave={() => setShowAboutText(false)}
+          >
+            <StaticImage
+              src="../images/about.png"
+              alt="about"
+              width={135}
+              height={100}
+              placeholder="fixed"
+            />
+            {
+              aboutText  && (
+                <AboutText>About</AboutText>
+              )
+            }
+          </AboutWrapper>
+        </FishGardenWrapper>
       </Background>
     </PageTransition>
   )
