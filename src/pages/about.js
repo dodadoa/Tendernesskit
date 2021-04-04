@@ -22,7 +22,7 @@ const FrontPageBackground = styled.div`
 `
 const Wrapper = styled.div`
   width: 90%;
-  padding: 80px;
+  padding: 100px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -30,11 +30,13 @@ const Wrapper = styled.div`
 
 const Content = styled.div`
   width: 500px;
+  margin-right: 100px;
+  margin-top: 200px;
 `
 const ContentText = styled.p`
   font-family: 'Spectral';
   font-size: 14px;
-  color: #55f26f;
+  color: #11B783;
 `
 
 const LeftHeaderWrapper = styled.div`
@@ -42,18 +44,46 @@ const LeftHeaderWrapper = styled.div`
   min-height: 650px;
   margin-left: 100px;
 `
-const AboutHeader = styled.h1`
+const AboutHeader = styled.h3`
   font-size: 18px;
+  font-weight: 400;
   position: absolute;
   top: 0;
   font-family: 'Spectral';
   font-style: italic;
+  color: #AEF26B;
 `
 const BackLink = styled.p`
   bottom: 30px;
   position: absolute;
   font-size: 18px;
   font-family: 'Spectral';
+  color: #AEF26B;
+`
+
+const MidHeaderWrapper = styled.div`
+  
+`
+const TendernessKitText = styled.h1`
+  font-family: 'Spectral';
+  color: #22B573;
+  font-style: italic;
+  font-size: 30px;
+  font-weight: 200;
+`
+const AuthorText = styled.p`
+  font-family: 'Spectral';
+  color: #22B573;
+  margin-bottom: 200px;
+`
+const ContributorsText = styled.p`
+  font-family: 'Spectral';
+  color: #22B573;
+  font-size: 14px;
+  margin: 0px;
+`
+const ContributorByText = styled(ContributorsText)`
+  margin-bottom: 15px;
 `
 
 const About = () => {
@@ -65,10 +95,19 @@ const About = () => {
             <AboutHeader>about</AboutHeader>
             <BackLink>back</BackLink>
           </LeftHeaderWrapper>
-          <div>
-            <p>tenderness kit </p>
-            <p>A project by سراب</p>
-          </div>
+          <MidHeaderWrapper>
+            <TendernessKitText>tenderness kit </TendernessKitText>
+            <AuthorText>A project by سراب</AuthorText>
+            <ContributorByText> Contributions by: </ContributorByText>
+            {
+              [
+                'Ali Samoo', 'Asad Alvi', 'Fazal Rizvi', 'Fiza Khatri', 'Jeanne Penjan Lassus',
+                'Nosheen Ali', 'Omer Wasim', 'Rahma Mian', 'Sadia Khatri', 'Shahana Rajani',
+                'Shayan Rajani', 'Sohail Abdullah', 'Zahra Malkani'
+              ].map((contributor) => (<ContributorsText>{contributor}</ContributorsText>))
+            }
+ 
+          </MidHeaderWrapper>
           <Content>
             <ContentText>A collection of meditations, mediations, conjurings, and reflections on being together, while apart in Karachi. </ContentText>
             <ContentText> Over the last year, as we learned and practiced new rules of social distancing, we were confronted with a new form of interiority. Borders hardened around us: not just of the nation-state, but borders that relegate us to home and family. In these moments, we found ourselves disconnecting from our bodies, and from the new realities that were our present. As the world moved online, distances grew and expanded between us and the communities we inhabit. </ContentText>
