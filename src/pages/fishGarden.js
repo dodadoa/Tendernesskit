@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import styled from "@emotion/styled"
 import PageTransition from 'gatsby-plugin-page-transitions'
 import { StaticImage } from "gatsby-plugin-image"
+import { Link } from "gatsby"
 
 const Background = styled.div`
   position: absolute;
@@ -30,6 +31,7 @@ const FishGardenWrapper = styled.div`
   position: absolute;
   top: calc(50% - 150px);
   left: calc(50%);
+  height: 380px;
 `
 const AboutText = styled.p`
   font-size: 14px;
@@ -39,6 +41,10 @@ const AboutText = styled.p`
   position: relative;
   top: -80px;
   left: 30px;
+  text-decoration: none;
+  &:hover{
+    text-decoration: none;
+  }
 `
 
 const AboutWrapper = styled.div`
@@ -112,40 +118,44 @@ const FishGarden = () => {
             height={380}
             placeholder="fixed"
           />
-          <AboutWrapper
-            onMouseOver={() => setShowAboutText(true)}
-            onMouseLeave={() => setShowAboutText(false)}
-          >
-            <StaticImage
-              src="../images/about.png"
-              alt="about"
-              width={135}
-              height={100}
-              placeholder="fixed"
-            />
-            {
-              aboutText  && (
-                <AboutText>About</AboutText>
-              )
-            }
-          </AboutWrapper>
-          <BioWrapper
-            onMouseOver={() => setShowBioText(true)}
-            onMouseLeave={() => setShowBioText(false)}
-          >
-            <StaticImage
-              src="../images/bio.png"
-              alt="bio"
-              width={85}
-              height={100}
-              placeholder="fixed"
-            />
-            {
-              bioText  && (
-                <BioText>Bio</BioText>
-              )
-            }
-          </BioWrapper>
+          <Link style={{ textDecoration: 'none' }} to="/about">
+            <AboutWrapper
+              onMouseOver={() => setShowAboutText(true)}
+              onMouseLeave={() => setShowAboutText(false)}
+            >
+              <StaticImage
+                src="../images/about.png"
+                alt="about"
+                width={135}
+                height={100}
+                placeholder="fixed"
+              />
+              {
+                aboutText  && (
+                  <AboutText>About</AboutText>
+                )
+              }
+            </AboutWrapper>
+          </Link>
+          <Link style={{ textDecoration: 'none' }} to="/bio">
+            <BioWrapper
+              onMouseOver={() => setShowBioText(true)}
+              onMouseLeave={() => setShowBioText(false)}
+            >
+              <StaticImage
+                src="../images/bio.png"
+                alt="bio"
+                width={85}
+                height={100}
+                placeholder="fixed"
+              />
+              {
+                bioText  && (
+                  <BioText>Bio</BioText>
+                )
+              }
+            </BioWrapper>
+          </Link>
           <DownloadWrapper
             onMouseOver={() => setShowDownloadText(true)}
             onMouseLeave={() => setShowDownloadText(false)}
