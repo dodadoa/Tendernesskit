@@ -25,7 +25,8 @@
     "gatsby-source-filesystem": "^3.2.0",
     "gatsby-transformer-sharp": "^3.2.0",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "react-particles-js": "^3.4.1"
   },
   "devDependencies": {
     "prettier": "2.2.1"

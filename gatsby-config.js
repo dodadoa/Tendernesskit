@@ -11,7 +11,7 @@ module.exports = {
           `Spectral`,
           `source sans pro\:300,400,400i,700`
         ],
-        display: 'swap'
+        display: 'auto'
       }
     },
     {
