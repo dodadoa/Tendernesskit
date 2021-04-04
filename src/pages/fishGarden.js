@@ -42,7 +42,7 @@ const AboutText = styled.p`
 `
 
 const AboutWrapper = styled.div`
-margin: 0;
+  margin: 0;
   width: 135px;
   height: 100px;
   position: relative;
@@ -74,9 +74,32 @@ const BioText = styled.p`
   left: 20px;
 `
 
+const DownloadWrapper = styled.div`
+  margin: 0;
+  width: 200px;
+  height: 100px;
+  position: relative;
+  left: 280px;
+  top: -330px;
+  &:hover {
+    cursor: pointer;
+  }
+`
+
+const DownloadText = styled.p`
+  font-size: 14px;
+  font-style: italic;
+  color: #b4f2a5;
+  font-family: 'Spectral';
+  position: relative;
+  top: -80px;
+  left: 50px;
+`
+
 const FishGarden = () => {
-  const [aboutText, setShowAboutText] = useState(true)
+  const [aboutText, setShowAboutText] = useState(false)
   const [bioText, setShowBioText] = useState(false)
+  const [downloadText, setShowDownloadText] = useState(false)
 
   return (
     <PageTransition>
@@ -123,6 +146,23 @@ const FishGarden = () => {
               )
             }
           </BioWrapper>
+          <DownloadWrapper
+            onMouseOver={() => setShowDownloadText(true)}
+            onMouseLeave={() => setShowDownloadText(false)}
+          >
+            <StaticImage
+              src="../images/download.png"
+              alt="bio"
+              width={200}
+              height={100}
+              placeholder="fixed"
+            />
+            {
+              downloadText  && (
+                <DownloadText>Download</DownloadText>
+              )
+            }
+          </DownloadWrapper>
         </FishGardenWrapper>
       </Background>
     </PageTransition>
