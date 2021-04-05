@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 import PageTransition from 'gatsby-plugin-page-transitions'
+import { Link } from "gatsby"
 
 const FrontPageBackground = styled.div`
   position: absolute;
@@ -43,7 +44,7 @@ const AboutHeader = styled.h3`
   color: #AEF26B;
 `
 const BackLink = styled.p`
-  bottom: -40px;
+  bottom: -80px;
   position: absolute;
   font-size: 18px;
   font-family: 'Spectral';
@@ -60,6 +61,7 @@ const TendernessKitText = styled.h1`
   font-style: italic;
   font-size: 30px;
   font-weight: 200;
+  margin-top: 40px;
 `
 const AuthorText = styled.p`
   font-family: 'Spectral';
@@ -95,7 +97,7 @@ const About = () => {
         <Wrapper>
           <LeftHeaderWrapper>
             <AboutHeader>about</AboutHeader>
-            <BackLink>back</BackLink>
+            <Link style={{ textDecoration: 'none' }} to="/fishGarden"><BackLink>back</BackLink></Link>
           </LeftHeaderWrapper>
           <MidHeaderWrapper>
             <TendernessKitText>tenderness kit </TendernessKitText>
