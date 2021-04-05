@@ -65,21 +65,6 @@ const TendernessKitText = styled.h1`
   font-weight: 200;
   margin-top: 40px;
 `
-const AuthorText = styled.p`
-  font-family: 'Spectral';
-  color: #F69995;
-  margin-bottom: 200px;
-`
-const ContributorsText = styled.p`
-  font-family: 'Spectral';
-  color: #F69995;
-  font-size: 14px;
-  margin: 0px;
-`
-const ContributorByText = styled(ContributorsText)`
-  margin-bottom: 15px;
-  margin-top: -60px;
-`
 
 const Content = styled.div`
   width: 500px;

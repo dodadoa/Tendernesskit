@@ -83,11 +83,14 @@ const Content = styled.div`
   width: 500px;
   margin-right: 100px;
   margin-top: 200px;
+  background: -webkit-linear-gradient(#43D15E, #11B783, #8CC63F, #11B783);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 `
 const ContentText = styled.p`
   font-family: 'Spectral';
   font-size: 14px;
-  color: #11B783;
 `
 
 const About = () => {

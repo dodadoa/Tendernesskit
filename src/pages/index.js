@@ -35,13 +35,14 @@ const HomeEnterWrapper = styled.div`
 const HomeTextWrapper = styled.div`
   width: 400px;
   position: relative;
-  left: calc(50% + 100px);
-  top: calc(50% - 180px);
+  left: calc(50% + 70px);
+  top: calc(50% - 170px);
 `
 const HomeText = styled.p`
-  font-size: 16px;
+  font-size: 12px;
   color: white;
   font-family: 'Spectral';
+  line-height: 16px;
 `
 const HOME_HOVER_TEXT_CONTENT =`tenderness kit`
 const HOME_HOVER_TEXT_CONTENT_2 = `A collection of meditations, mediations, conjurings,
@@ -62,8 +63,8 @@ const Home = () => {
             <StaticImage
               src="../images/home_enter.png"
               alt="Enter the world"
-              width={90}
-              height={115}
+              width={60}
+              height={75}
               placeholder="fixed"
             />
           </HomeEnterWrapper>
