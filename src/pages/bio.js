@@ -46,7 +46,7 @@ const AboutHeader = styled.h3`
   color: #F69995;
 `
 const BackLink = styled.p`
-  bottom: -80px;
+  bottom: -60px;
   position: absolute;
   font-size: 18px;
   font-family: 'Spectral';
@@ -98,8 +98,8 @@ const Bio = () => {
       <FrontPageBackground>
         <Wrapper>
           <LeftHeaderWrapper>
-          <AboutHeader>bio</AboutHeader>
-          <Link style={{ textDecoration: 'none' }} to="/fishGarden"><BackLink>back</BackLink></Link>
+            <AboutHeader>bio</AboutHeader>
+            <Link style={{ textDecoration: 'none' }} to="/fishGarden"><BackLink>back</BackLink></Link>
           </LeftHeaderWrapper>
           <MidHeaderWrapper>
             <TendernessKitText>saraab سراب</TendernessKitText>
