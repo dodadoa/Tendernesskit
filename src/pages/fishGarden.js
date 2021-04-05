@@ -92,14 +92,15 @@ const DownloadWrapper = styled.div`
   }
 `
 
-const DownloadText = styled.p`
+const DownloadText = styled.a`
   font-size: 14px;
   font-style: italic;
   color: #b4f2a5;
   font-family: 'Spectral';
   position: relative;
-  top: -80px;
-  left: 50px;
+  text-decoration: none;
+  top: -70px;
+  left: 60px;
 `
 
 const FishGarden = () => {
@@ -169,7 +170,9 @@ const FishGarden = () => {
             />
             {
               downloadText  && (
-                <DownloadText>Download</DownloadText>
+                <DownloadText href={'download.zip'} download>
+                  Download
+                </DownloadText>
               )
             }
           </DownloadWrapper>
