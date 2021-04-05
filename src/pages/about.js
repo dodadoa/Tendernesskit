@@ -28,21 +28,10 @@ const Wrapper = styled.div`
   justify-content: space-between;
 `
 
-const Content = styled.div`
-  width: 500px;
-  margin-right: 100px;
-  margin-top: 200px;
-`
-const ContentText = styled.p`
-  font-family: 'Spectral';
-  font-size: 14px;
-  color: #11B783;
-`
-
 const LeftHeaderWrapper = styled.div`
   position: relative;
-  min-height: 650px;
   margin-left: 100px;
+  width: 150px;
 `
 const AboutHeader = styled.h3`
   font-size: 18px;
@@ -54,7 +43,7 @@ const AboutHeader = styled.h3`
   color: #AEF26B;
 `
 const BackLink = styled.p`
-  bottom: 30px;
+  bottom: -40px;
   position: absolute;
   font-size: 18px;
   font-family: 'Spectral';
@@ -62,7 +51,8 @@ const BackLink = styled.p`
 `
 
 const MidHeaderWrapper = styled.div`
-  
+  position: relative;
+  width: 200px;
 `
 const TendernessKitText = styled.h1`
   font-family: 'Spectral';
@@ -84,6 +74,18 @@ const ContributorsText = styled.p`
 `
 const ContributorByText = styled(ContributorsText)`
   margin-bottom: 15px;
+  margin-top: -60px;
+`
+
+const Content = styled.div`
+  width: 500px;
+  margin-right: 100px;
+  margin-top: 200px;
+`
+const ContentText = styled.p`
+  font-family: 'Spectral';
+  font-size: 14px;
+  color: #11B783;
 `
 
 const About = () => {
