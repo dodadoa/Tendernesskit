@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import styled from "@emotion/styled"
 import PageTransition from 'gatsby-plugin-page-transitions'
-import { StaticImage } from "gatsby-plugin-image"
+import fishGarden from "../images/fish_garden.gif"
 import { Link } from "gatsby"
 
 const Background = styled.div`
@@ -39,8 +39,8 @@ const AboutText = styled.p`
   color: #97e384;
   font-family: 'Spectral';
   position: relative;
-  top: -80px;
-  left: 30px;
+  top: 40px;
+  left: 10px;
   text-decoration: none;
   &:hover{
     text-decoration: none;
@@ -76,8 +76,8 @@ const BioText = styled.p`
   color: #97e384;
   font-family: 'Spectral';
   position: relative;
-  top: -60px;
-  left: 20px;
+  top: 60px;
+  left: 15px;
 `
 
 const DownloadWrapper = styled.div`
@@ -91,7 +91,6 @@ const DownloadWrapper = styled.div`
     cursor: pointer;
   }
 `
-
 const DownloadText = styled.a`
   font-size: 14px;
   font-style: italic;
@@ -99,8 +98,8 @@ const DownloadText = styled.a`
   font-family: 'Spectral';
   position: relative;
   text-decoration: none;
-  top: -70px;
-  left: 60px;
+  top: 40px;
+  left: 30px;
 `
 
 const FishGarden = () => {
@@ -112,25 +111,12 @@ const FishGarden = () => {
     <PageTransition>
       <Background>
         <FishGardenWrapper>
-          <StaticImage
-            src="../images/fish_garden.png"
-            alt="fish garden"
-            width={530}
-            height={380}
-            placeholder="fixed"
-          />
+          <img src={fishGarden} alt="fish garden" />
           <Link style={{ textDecoration: 'none' }} to="/about">
             <AboutWrapper
               onMouseOver={() => setShowAboutText(true)}
               onMouseLeave={() => setShowAboutText(false)}
             >
-              <StaticImage
-                src="../images/about.png"
-                alt="about"
-                width={135}
-                height={100}
-                placeholder="fixed"
-              />
               {
                 aboutText  && (
                   <AboutText>About</AboutText>
@@ -143,13 +129,6 @@ const FishGarden = () => {
               onMouseOver={() => setShowBioText(true)}
               onMouseLeave={() => setShowBioText(false)}
             >
-              <StaticImage
-                src="../images/bio.png"
-                alt="bio"
-                width={85}
-                height={100}
-                placeholder="fixed"
-              />
               {
                 bioText  && (
                   <BioText>Bio</BioText>
@@ -161,13 +140,6 @@ const FishGarden = () => {
             onMouseOver={() => setShowDownloadText(true)}
             onMouseLeave={() => setShowDownloadText(false)}
           >
-            <StaticImage
-              src="../images/download.png"
-              alt="bio"
-              width={200}
-              height={100}
-              placeholder="fixed"
-            />
             {
               downloadText  && (
                 <DownloadText href={'download.zip'} download>
