@@ -31,7 +31,7 @@ const FishGardenWrapper = styled.div`
   position: absolute;
   top: calc(50% - 150px);
   left: calc(50%);
-  height: 380px;
+  width: 500px;
 `
 const AboutText = styled.p`
   font-size: 14px;
@@ -111,7 +111,7 @@ const FishGarden = () => {
     <PageTransition>
       <Background>
         <FishGardenWrapper>
-          <img src={fishGarden} alt="fish garden" />
+          <img style={{ width: '500px' }} src={fishGarden} alt="fish garden" />
           <Link style={{ textDecoration: 'none' }} to="/about">
             <AboutWrapper
               onMouseOver={() => setShowAboutText(true)}
