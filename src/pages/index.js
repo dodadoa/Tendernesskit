@@ -26,8 +26,8 @@ const HomeEnterWrapper = styled.div`
   width: 100px;
   height: 100px;
   position: relative;
-  left: calc(50% - 50px);
-  top: calc(50% - 50px);
+  left: calc(50% - 30px);
+  top: calc(50%);
   &:hover{
     cursor: pointer;
   }
@@ -36,15 +36,15 @@ const HomeTextWrapper = styled.div`
   width: 400px;
   position: relative;
   left: calc(50% + 70px);
-  top: calc(50% - 170px);
+  top: calc(50% - 115px);
 `
 const HomeText = styled.p`
-  font-size: 12px;
+  font-size: 14px;
   color: white;
   font-family: 'Spectral';
   line-height: 16px;
 `
-const HOME_HOVER_TEXT_CONTENT =`tenderness kit`
+const HOME_HOVER_TEXT_CONTENT =`tenderness kit~`
 const HOME_HOVER_TEXT_CONTENT_2 = `A collection of meditations, mediations, conjurings,
 and reflections on being together, while apart in Karachi.`
 const HOME_HOVER_TEXT_CONTENT_3 = `A gathering, housed in a downloadable zipped folder.`
@@ -63,8 +63,8 @@ const Home = () => {
             <StaticImage
               src="../images/home_enter.png"
               alt="Enter the world"
-              width={60}
-              height={75}
+              width={70}
+              height={85}
               placeholder="fixed"
             />
           </HomeEnterWrapper>
@@ -73,7 +73,7 @@ const Home = () => {
         {
           showText && (
             <HomeTextWrapper>
-              <HomeText> {HOME_HOVER_TEXT_CONTENT} </HomeText>
+              <HomeText style={{ fontStyle: 'italic' }}> {HOME_HOVER_TEXT_CONTENT} </HomeText>
               <HomeText> {HOME_HOVER_TEXT_CONTENT_2} </HomeText>
               <HomeText> {HOME_HOVER_TEXT_CONTENT_3} </HomeText>
             </HomeTextWrapper>
