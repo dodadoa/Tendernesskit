@@ -3,6 +3,7 @@ module.exports = {
     `gatsby-plugin-emotion`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-fontawesome-css`,
     `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-google-fonts`,

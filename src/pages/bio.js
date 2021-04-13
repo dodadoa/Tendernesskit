@@ -23,17 +23,19 @@ const FrontPageBackground = styled.div`
 `
 
 const Wrapper = styled.div`
-  width: 90%;
-  padding: 100px;
+  padding: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  position: fixed;
 `
 
 const LeftHeaderWrapper = styled.div`
   position: relative;
   margin-left: 100px;
-  width: 150px;
+  width: 100px;
 `
 const AboutHeader = styled.h3`
   font-size: 18px;
@@ -45,7 +47,7 @@ const AboutHeader = styled.h3`
   color: #F69995;
 `
 const BackLink = styled.p`
-  bottom: -60px;
+  bottom: 5%;
   position: absolute;
   font-size: 18px;
   font-family: 'Spectral';
@@ -55,6 +57,7 @@ const BackLink = styled.p`
 const MidHeaderWrapper = styled.div`
   position: relative;
   width: 200px;
+  margin-top: 5%;
 `
 const TendernessKitText = styled.h1`
   font-family: 'Spectral';
@@ -62,13 +65,12 @@ const TendernessKitText = styled.h1`
   font-style: italic;
   font-size: 30px;
   font-weight: 200;
-  margin-top: 40px;
 `
 
 const Content = styled.div`
   width: 500px;
   margin-right: 100px;
-  margin-top: 200px;
+  margin-top: 10%;
 `
 const ContentText = styled.p`
   font-family: 'Spectral';
@@ -89,9 +91,9 @@ const Bio = () => {
             <TendernessKitText>saraab سراب</TendernessKitText>
           </MidHeaderWrapper>
           <Content>
-          <ContentText>Saraab envisions their practice and its nomadic formations as part of a living organism: part mythical, part real, which can be called upon through invocations, rituals, and critical fabulations. Such organisms have always existed in militarized and heteropatriarchal orderings of the world, yet they have been systematically made to disappear. Given impermeable borders and the right-wing swing in global politics, this organism can ripple and swim their way through bodies of water, moving through landscapes and ecologies, under and over nationalisms.</ContentText>
-          <ContentText>Saraab—meaning mirage or nazar ka dhoka—is a quiet, amorphous entity that can go undetected. Unapologetically sensitive to their surroundings, their movements and formations work slowly and quietly to unsettle existing restrictions and regulations. They seek to create new, kind, tender infrastructures and ecologies that utilize the gaps and crevices of existing systems and spaces. Every time they recoil from a hostile touch, it is not a withdrawal, but a practice of drawing strength from inwards to open up new spaces and new possibilities for being transformed by each other.</ContentText>
-          <ContentText>Saraab is an ongoing collaboration between Shahana Rajani and Omer Wasim.</ContentText>
+            <ContentText>Saraab envisions their practice and its nomadic formations as part of a living organism: part mythical, part real, which can be called upon through invocations, rituals, and critical fabulations. Such organisms have always existed in militarized and heteropatriarchal orderings of the world, yet they have been systematically made to disappear. Given impermeable borders and the right-wing swing in global politics, this organism can ripple and swim their way through bodies of water, moving through landscapes and ecologies, under and over nationalisms.</ContentText>
+            <ContentText>Saraab—meaning mirage or nazar ka dhoka—is a quiet, amorphous entity that can go undetected. Unapologetically sensitive to their surroundings, their movements and formations work slowly and quietly to unsettle existing restrictions and regulations. They seek to create new, kind, tender infrastructures and ecologies that utilize the gaps and crevices of existing systems and spaces. Every time they recoil from a hostile touch, it is not a withdrawal, but a practice of drawing strength from inwards to open up new spaces and new possibilities for being transformed by each other.</ContentText>
+            <ContentText>Saraab is an ongoing collaboration between Shahana Rajani and Omer Wasim.</ContentText>
           </Content>
         </Wrapper>
       </FrontPageBackground>

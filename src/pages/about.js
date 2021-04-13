@@ -21,17 +21,19 @@ const FrontPageBackground = styled.div`
   height: 100%;
 `
 const Wrapper = styled.div`
-  width: 90%;
-  padding: 100px;
+  padding: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  position: fixed;
 `
 
 const LeftHeaderWrapper = styled.div`
   position: relative;
   margin-left: 100px;
-  width: 150px;
+  width: 100px;
 `
 const AboutHeader = styled.h3`
   font-size: 18px;
@@ -43,24 +45,29 @@ const AboutHeader = styled.h3`
   color: #AEF26B;
 `
 const BackLink = styled.p`
-  bottom: -80px;
+  bottom: 5%;
   position: absolute;
   font-size: 18px;
   font-family: 'Spectral';
-  color: #AEF26B;
+  color: #43D15E;
 `
 
 const MidHeaderWrapper = styled.div`
   position: relative;
-  width: 200px;
+  width: 250px;
 `
 const TendernessKitText = styled.h1`
   font-family: 'Spectral';
   color: #22B573;
   font-style: italic;
   font-size: 30px;
-  font-weight: 200;
+  font-weight: 300;
   margin-top: 40px;
+  letter-spacing: 4px;
+  background: -webkit-linear-gradient(#43D15E, #11B783, #8CC63F, #11B783);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 `
 const AuthorText = styled.p`
   font-family: 'Spectral';
