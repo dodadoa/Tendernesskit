@@ -16,6 +16,7 @@
   "dependencies": {
     "@emotion/react": "^11.1.5",
     "@emotion/styled": "^11.1.5",
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "gatsby": "^3.1.2",
     "gatsby-plugin-emotion": "^6.2.0",
     "gatsby-plugin-fontawesome-css": "^1.1.0",
