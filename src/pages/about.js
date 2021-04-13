@@ -2,6 +2,7 @@ import React from "react"
 import styled from "@emotion/styled"
 import PageTransition from 'gatsby-plugin-page-transitions'
 import { Link } from "gatsby"
+import Layout from "../components/layout"
 
 const FrontPageBackground = styled.div`
   position: fixed;
@@ -112,37 +113,39 @@ const TextWrapper = styled.div`
 
 const About = () => {
   return (
-    <PageTransition>
-      <FrontPageBackground>
-        <Wrapper>
-          <LeftHeaderWrapper>
-            <AboutHeader>about</AboutHeader>
-            <Link style={{ textDecoration: 'none' }} to="/fishGarden"><BackLink>back</BackLink></Link>
-          </LeftHeaderWrapper>
-          <MidHeaderWrapper>
-            <TendernessKitText>tenderness kit </TendernessKitText>
-            <TextWrapper>
-              <AuthorText>A project by</AuthorText>
-              <UrduText>سراب</UrduText>
-            </TextWrapper>
-            <ContributorByText> Contributions by: </ContributorByText>
-            {
-              [
-                'Ali Samoo', 'Asad Alvi', 'Fazal Rizvi', 'Fiza Khatri', 'Jeanne Penjan Lassus',
-                'Nosheen Ali', 'Omer Wasim', 'Rahma Mian', 'Sadia Khatri', 'Shahana Rajani',
-                'Shayan Rajani', 'Sohail Abdullah', 'Zahra Malkani'
-              ].map((contributor) => (<ContributorsText>{contributor}</ContributorsText>))
-            }
- 
-          </MidHeaderWrapper>
-          <Content>
-            <ContentText>A collection of meditations, mediations, conjurings, and reflections on being together, while apart in Karachi. </ContentText>
-            <ContentText> Over the last year, as we learned and practiced new rules of social distancing, we were confronted with a new form of interiority. Borders hardened around us: not just of the nation-state, but borders that relegate us to home and family. In these moments, we found ourselves disconnecting from our bodies, and from the new realities that were our present. As the world moved online, distances grew and expanded between us and the communities we inhabit. </ContentText>
-            <ContentText> The tenderness kit emerged from a desire to share and exchange our collective present, experienced differently by each of us. Using our sensual registers and the power of the erotic, we hoped to return to our own bodies, and by extension to each other. It is a coming together of sorts, housed in a downloadable zipped folder.</ContentText>
-          </Content>
-        </Wrapper>
-      </FrontPageBackground>
-    </PageTransition>
+    <Layout title="about">
+      <PageTransition>
+        <FrontPageBackground>
+          <Wrapper>
+            <LeftHeaderWrapper>
+              <AboutHeader>about</AboutHeader>
+              <Link style={{ textDecoration: 'none' }} to="/fishGarden"><BackLink>back</BackLink></Link>
+            </LeftHeaderWrapper>
+            <MidHeaderWrapper>
+              <TendernessKitText>tenderness kit </TendernessKitText>
+              <TextWrapper>
+                <AuthorText>A project by</AuthorText>
+                <UrduText>سراب</UrduText>
+              </TextWrapper>
+              <ContributorByText> Contributions by: </ContributorByText>
+              {
+                [
+                  'Ali Samoo', 'Asad Alvi', 'Fazal Rizvi', 'Fiza Khatri', 'Jeanne Penjan Lassus',
+                  'Nosheen Ali', 'Omer Wasim', 'Rahma Mian', 'Sadia Khatri', 'Shahana Rajani',
+                  'Shayan Rajani', 'Sohail Abdullah', 'Zahra Malkani'
+                ].map((contributor) => (<ContributorsText>{contributor}</ContributorsText>))
+              }
+  
+            </MidHeaderWrapper>
+            <Content>
+              <ContentText>A collection of meditations, mediations, conjurings, and reflections on being together, while apart in Karachi. </ContentText>
+              <ContentText> Over the last year, as we learned and practiced new rules of social distancing, we were confronted with a new form of interiority. Borders hardened around us: not just of the nation-state, but borders that relegate us to home and family. In these moments, we found ourselves disconnecting from our bodies, and from the new realities that were our present. As the world moved online, distances grew and expanded between us and the communities we inhabit. </ContentText>
+              <ContentText> The tenderness kit emerged from a desire to share and exchange our collective present, experienced differently by each of us. Using our sensual registers and the power of the erotic, we hoped to return to our own bodies, and by extension to each other. It is a coming together of sorts, housed in a downloadable zipped folder.</ContentText>
+            </Content>
+          </Wrapper>
+        </FrontPageBackground>
+      </PageTransition>
+    </Layout>
   )
 }
 

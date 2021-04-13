@@ -3,6 +3,7 @@ import styled from "@emotion/styled"
 import PageTransition from 'gatsby-plugin-page-transitions'
 import fishGarden from "../images/fish_garden.gif"
 import { Link } from "gatsby"
+import Layout from "../components/layout"
 
 const Background = styled.div`
   position: fixed;
@@ -108,49 +109,51 @@ const FishGarden = () => {
   const [downloadText, setShowDownloadText] = useState(false)
 
   return (
-    <PageTransition>
-      <Background>
-        <FishGardenWrapper>
-          <img style={{ width: '500px' }} src={fishGarden} alt="fish garden" />
-          <Link style={{ textDecoration: 'none' }} to="/about">
-            <AboutWrapper
-              onMouseOver={() => setShowAboutText(true)}
-              onMouseLeave={() => setShowAboutText(false)}
+    <Layout title="Garden">
+      <PageTransition>
+        <Background>
+          <FishGardenWrapper>
+            <img style={{ width: '500px' }} src={fishGarden} alt="fish garden" />
+            <Link style={{ textDecoration: 'none' }} to="/about">
+              <AboutWrapper
+                onMouseOver={() => setShowAboutText(true)}
+                onMouseLeave={() => setShowAboutText(false)}
+              >
+                {
+                  aboutText  && (
+                    <AboutText>about</AboutText>
+                  )
+                }
+              </AboutWrapper>
+            </Link>
+            <Link style={{ textDecoration: 'none' }} to="/bio">
+              <BioWrapper
+                onMouseOver={() => setShowBioText(true)}
+                onMouseLeave={() => setShowBioText(false)}
+              >
+                {
+                  bioText  && (
+                    <BioText>bio</BioText>
+                  )
+                }
+              </BioWrapper>
+            </Link>
+            <DownloadWrapper
+              onMouseOver={() => setShowDownloadText(true)}
+              onMouseLeave={() => setShowDownloadText(false)}
             >
               {
-                aboutText  && (
-                  <AboutText>about</AboutText>
+                downloadText  && (
+                  <DownloadText href={'download.zip'} download>
+                    DOWNLOAD
+                  </DownloadText>
                 )
               }
-            </AboutWrapper>
-          </Link>
-          <Link style={{ textDecoration: 'none' }} to="/bio">
-            <BioWrapper
-              onMouseOver={() => setShowBioText(true)}
-              onMouseLeave={() => setShowBioText(false)}
-            >
-              {
-                bioText  && (
-                  <BioText>bio</BioText>
-                )
-              }
-            </BioWrapper>
-          </Link>
-          <DownloadWrapper
-            onMouseOver={() => setShowDownloadText(true)}
-            onMouseLeave={() => setShowDownloadText(false)}
-          >
-            {
-              downloadText  && (
-                <DownloadText href={'download.zip'} download>
-                  DOWNLOAD
-                </DownloadText>
-              )
-            }
-          </DownloadWrapper>
-        </FishGardenWrapper>
-      </Background>
-    </PageTransition>
+            </DownloadWrapper>
+          </FishGardenWrapper>
+        </Background>
+      </PageTransition>
+    </Layout>
   )
 }
 

@@ -1,10 +1,16 @@
 module.exports = {
+  siteMetadata: {
+    title: `Tenderness Kit `,
+    description: `tendernesskit.com`,
+    author: `wasawat and tewprai and co`,
+  },
   plugins: [
     `gatsby-plugin-emotion`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-fontawesome-css`,
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {

@@ -2,6 +2,7 @@ import React from "react"
 import styled from "@emotion/styled"
 import PageTransition from 'gatsby-plugin-page-transitions'
 import { Link } from "gatsby"
+import Layout from "../components/layout"
 
 const FrontPageBackground = styled.div`
   position: fixed;
@@ -67,7 +68,7 @@ const TendernessKitText = styled.h1`
   color: #F69995;
   font-style: italic;
   font-size: 30px;
-  font-weight: 200;
+  font-weight: 300;
   letter-spacing: 3px;
 `
 const UrduText = styled.h1`
@@ -91,27 +92,29 @@ const ContentText = styled.p`
 
 const Bio = () => {
   return (
-    <PageTransition>
-      <FrontPageBackground>
-        <Wrapper>
-          <LeftHeaderWrapper>
-            <AboutHeader>bio</AboutHeader>
-            <Link style={{ textDecoration: 'none' }} to="/fishGarden"><BackLink>back</BackLink></Link>
-          </LeftHeaderWrapper>
-          <MidHeaderWrapper>
-            <TextWrapper>
-              <TendernessKitText>saraab</TendernessKitText>
-              <UrduText>سراب</UrduText>
-            </TextWrapper>
-          </MidHeaderWrapper>
-          <Content>
-            <ContentText>Saraab envisions their practice and its nomadic formations as part of a living organism: part mythical, part real, which can be called upon through invocations, rituals, and critical fabulations. Such organisms have always existed in militarized and heteropatriarchal orderings of the world, yet they have been systematically made to disappear. Given impermeable borders and the right-wing swing in global politics, this organism can ripple and swim their way through bodies of water, moving through landscapes and ecologies, under and over nationalisms.</ContentText>
-            <ContentText>Saraab—meaning mirage or nazar ka dhoka—is a quiet, amorphous entity that can go undetected. Unapologetically sensitive to their surroundings, their movements and formations work slowly and quietly to unsettle existing restrictions and regulations. They seek to create new, kind, tender infrastructures and ecologies that utilize the gaps and crevices of existing systems and spaces. Every time they recoil from a hostile touch, it is not a withdrawal, but a practice of drawing strength from inwards to open up new spaces and new possibilities for being transformed by each other.</ContentText>
-            <ContentText>Saraab is an ongoing collaboration between Shahana Rajani and Omer Wasim.</ContentText>
-          </Content>
-        </Wrapper>
-      </FrontPageBackground>
-    </PageTransition>
+    <Layout title="bio">
+      <PageTransition>
+        <FrontPageBackground>
+          <Wrapper>
+            <LeftHeaderWrapper>
+              <AboutHeader>bio</AboutHeader>
+              <Link style={{ textDecoration: 'none' }} to="/fishGarden"><BackLink>back</BackLink></Link>
+            </LeftHeaderWrapper>
+            <MidHeaderWrapper>
+              <TextWrapper>
+                <TendernessKitText>saraab</TendernessKitText>
+                <UrduText>سراب</UrduText>
+              </TextWrapper>
+            </MidHeaderWrapper>
+            <Content>
+              <ContentText>Saraab envisions their practice and its nomadic formations as part of a living organism: part mythical, part real, which can be called upon through invocations, rituals, and critical fabulations. Such organisms have always existed in militarized and heteropatriarchal orderings of the world, yet they have been systematically made to disappear. Given impermeable borders and the right-wing swing in global politics, this organism can ripple and swim their way through bodies of water, moving through landscapes and ecologies, under and over nationalisms.</ContentText>
+              <ContentText>Saraab—meaning mirage or nazar ka dhoka—is a quiet, amorphous entity that can go undetected. Unapologetically sensitive to their surroundings, their movements and formations work slowly and quietly to unsettle existing restrictions and regulations. They seek to create new, kind, tender infrastructures and ecologies that utilize the gaps and crevices of existing systems and spaces. Every time they recoil from a hostile touch, it is not a withdrawal, but a practice of drawing strength from inwards to open up new spaces and new possibilities for being transformed by each other.</ContentText>
+              <ContentText>Saraab is an ongoing collaboration between Shahana Rajani and Omer Wasim.</ContentText>
+            </Content>
+          </Wrapper>
+        </FrontPageBackground>
+      </PageTransition>
+    </Layout>
   )
 }
 

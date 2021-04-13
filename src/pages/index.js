@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import styled from "@emotion/styled"
 import { StaticImage } from "gatsby-plugin-image"
 import PageTransition from 'gatsby-plugin-page-transitions'
-import "../components/layout.css"
+import Layout from "../components/layout"
 
 const FrontPageBackground = styled.div`
   position: fixed;
@@ -53,34 +53,36 @@ const Home = () => {
   const [showText, setShowText] = useState(false);
 
   return (
-    <PageTransition>
-      <FrontPageBackground>
-        <Link to="/fishGarden">
-          <HomeEnterWrapper
-            onMouseOver={() => setShowText(true)}
-            onMouseLeave={() => setShowText(false)}
-          >
-            <StaticImage
-              src="../images/home_enter.png"
-              alt="Enter the world"
-              width={70}
-              height={85}
-              placeholder="fixed"
-            />
-          </HomeEnterWrapper>
-        </Link>
-        
-        {
-          showText && (
-            <HomeTextWrapper>
-              <HomeText style={{ fontStyle: 'italic' }}> {HOME_HOVER_TEXT_CONTENT} </HomeText>
-              <HomeText> {HOME_HOVER_TEXT_CONTENT_2} </HomeText>
-              <HomeText> {HOME_HOVER_TEXT_CONTENT_3} </HomeText>
-            </HomeTextWrapper>
-          )
-        }
-      </FrontPageBackground>
-    </PageTransition>
+    <Layout title="Home">
+      <PageTransition>
+        <FrontPageBackground>
+          <Link to="/fishGarden">
+            <HomeEnterWrapper
+              onMouseOver={() => setShowText(true)}
+              onMouseLeave={() => setShowText(false)}
+            >
+              <StaticImage
+                src="../images/home_enter.png"
+                alt="Enter the world"
+                width={70}
+                height={85}
+                placeholder="fixed"
+              />
+            </HomeEnterWrapper>
+          </Link>
+          
+          {
+            showText && (
+              <HomeTextWrapper>
+                <HomeText style={{ fontStyle: 'italic' }}> {HOME_HOVER_TEXT_CONTENT} </HomeText>
+                <HomeText> {HOME_HOVER_TEXT_CONTENT_2} </HomeText>
+                <HomeText> {HOME_HOVER_TEXT_CONTENT_3} </HomeText>
+              </HomeTextWrapper>
+            )
+          }
+        </FrontPageBackground>
+      </PageTransition>
+    </Layout>
   )
 }
 
