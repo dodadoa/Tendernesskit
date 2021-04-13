@@ -20,7 +20,7 @@ const FrontPageBackground = styled.div`
   height: 100%;
 `
 
-const HomeEnterWrapper = styled.div`
+const NotFoundEnterWrapper = styled.div`
   width: 100px;
   height: 100px;
   position: relative;
@@ -30,38 +30,38 @@ const HomeEnterWrapper = styled.div`
     cursor: pointer;
   }
 `
-const HomeTextWrapper = styled.div`
+const NotFoundTextWrapper = styled.div`
   width: 400px;
   position: relative;
   left: calc(50% + 70px);
   top: calc(50% - 115px);
 `
-const HomeText = styled.p`
+const NotFoundText = styled.p`
   font-size: 14px;
   color: white;
   font-family: 'Spectral';
   line-height: 16px;
 `
 
-const Home = () => {
+const NotFound = () => {
   const [showText, setShowText] = useState(false);
 
   return (
     <PageTransition>
       <FrontPageBackground>
         <Link to="/fishGarden">
-          <HomeEnterWrapper
+          <NotFoundEnterWrapper
             onMouseOver={() => setShowText(true)}
             onMouseLeave={() => setShowText(false)}
           >
-          </HomeEnterWrapper>
+          </NotFoundEnterWrapper>
         </Link>
         
         {
           showText && (
-            <HomeTextWrapper>
-              <HomeText style={{ fontStyle: 'italic' }}> 404: NOT FOUND </HomeText>
-            </HomeTextWrapper>
+            <NotFoundTextWrapper>
+              <NotFoundText style={{ fontStyle: 'italic' }}> 404: NOT FOUND </NotFoundText>
+            </NotFoundTextWrapper>
           )
         }
       </FrontPageBackground>
@@ -69,4 +69,4 @@ const Home = () => {
   )
 }
 
-export default Home;
+export default NotFound;

@@ -41,7 +41,7 @@ const AboutWrapper = styled.div`
   height: 100px;
   position: relative;
   left: 330px;
-  top: -250px;
+  top: -280px;
   &:hover {
     cursor: pointer;
   }
@@ -66,7 +66,7 @@ const BioWrapper = styled.div`
   height: 100px;
   position: relative;
   left: 10px;
-  top: -380px;
+  top: -410px;
   &:hover {
     cursor: pointer;
   }
@@ -87,7 +87,7 @@ const DownloadWrapper = styled.div`
   height: 100px;
   position: relative;
   left: 280px;
-  top: -330px;
+  top: -360px;
   &:hover {
     cursor: pointer;
   }
@@ -103,6 +103,19 @@ const DownloadText = styled.a`
   left: 25px;
 `
 
+const PondWrapper = styled.div`
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  left: 180px;
+  top: -300px;
+  position: relative;
+  /* background-color: black; */
+  &:hover {
+    cursor: pointer;
+  }
+`
+
 const FishGarden = () => {
   const [aboutText, setShowAboutText] = useState(false)
   const [bioText, setShowBioText] = useState(false)
@@ -114,6 +127,9 @@ const FishGarden = () => {
         <Background>
           <FishGardenWrapper>
             <img style={{ width: '500px' }} src={fishGarden} alt="fish garden" />
+            <Link to="/pond">
+              <PondWrapper />
+            </Link>
             <Link style={{ textDecoration: 'none' }} to="/about">
               <AboutWrapper
                 onMouseOver={() => setShowAboutText(true)}
