@@ -39,7 +39,7 @@ const Layout = ({ description, lang, meta, title, children  }) => {
             },
             {
               property: `og:title`,
-              content: title,
+              content: title ? `${defaultTitle} - ${title}` : defaultTitle,
             },
             {
               property: `og:description`,

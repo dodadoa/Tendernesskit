@@ -3,6 +3,8 @@ import styled from "@emotion/styled"
 import PageTransition from 'gatsby-plugin-page-transitions'
 import { Link } from "gatsby"
 import Layout from "../components/layout"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 
 const FrontPageBackground = styled.div`
   position: fixed;
@@ -98,7 +100,12 @@ const Bio = () => {
           <Wrapper>
             <LeftHeaderWrapper>
               <AboutHeader>bio</AboutHeader>
-              <Link style={{ textDecoration: 'none' }} to="/fishGarden"><BackLink>back</BackLink></Link>
+              <Link style={{ textDecoration: 'none' }} to="/fishGarden">
+                <BackLink>
+                  <FontAwesomeIcon style={{ fontSize: '12px', marginRight: '10px' }} icon={faArrowLeft}/>
+                  back
+                </BackLink>
+              </Link>
             </LeftHeaderWrapper>
             <MidHeaderWrapper>
               <TextWrapper>
