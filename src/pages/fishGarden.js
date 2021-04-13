@@ -99,7 +99,7 @@ const DownloadText = styled.a`
   position: relative;
   text-decoration: none;
   top: 35px;
-  left: 30px;
+  left: 25px;
 `
 
 const FishGarden = () => {

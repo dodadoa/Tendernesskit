@@ -21,7 +21,6 @@ const FrontPageBackground = styled.div`
   width: 100%;
   height: 100%;
 `
-
 const Wrapper = styled.div`
   padding: 20px;
   display: flex;
@@ -59,12 +58,24 @@ const MidHeaderWrapper = styled.div`
   width: 200px;
   margin-top: 5%;
 `
+const TextWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+`
 const TendernessKitText = styled.h1`
   font-family: 'Spectral';
   color: #F69995;
   font-style: italic;
   font-size: 30px;
   font-weight: 200;
+  letter-spacing: 3px;
+`
+const UrduText = styled.h1`
+  font-family: 'Noto Sans';
+  font-size: 20px;
+  font-weight: 200;
+  color: #F69995;
+  margin-left: 60px;
 `
 
 const Content = styled.div`
@@ -88,7 +99,10 @@ const Bio = () => {
             <Link style={{ textDecoration: 'none' }} to="/fishGarden"><BackLink>back</BackLink></Link>
           </LeftHeaderWrapper>
           <MidHeaderWrapper>
-            <TendernessKitText>saraab سراب</TendernessKitText>
+            <TextWrapper>
+              <TendernessKitText>saraab</TendernessKitText>
+              <UrduText>سراب</UrduText>
+            </TextWrapper>
           </MidHeaderWrapper>
           <Content>
             <ContentText>Saraab envisions their practice and its nomadic formations as part of a living organism: part mythical, part real, which can be called upon through invocations, rituals, and critical fabulations. Such organisms have always existed in militarized and heteropatriarchal orderings of the world, yet they have been systematically made to disappear. Given impermeable borders and the right-wing swing in global politics, this organism can ripple and swim their way through bodies of water, moving through landscapes and ecologies, under and over nationalisms.</ContentText>

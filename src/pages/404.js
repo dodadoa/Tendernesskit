@@ -1,9 +1,7 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 import styled from "@emotion/styled"
-import { StaticImage } from "gatsby-plugin-image"
 import PageTransition from 'gatsby-plugin-page-transitions'
-import "../components/layout.css"
 
 const FrontPageBackground = styled.div`
   position: fixed;
@@ -44,10 +42,6 @@ const HomeText = styled.p`
   font-family: 'Spectral';
   line-height: 16px;
 `
-const HOME_HOVER_TEXT_CONTENT =`tenderness kit~`
-const HOME_HOVER_TEXT_CONTENT_2 = `A collection of meditations, mediations, conjurings,
-and reflections on being together, while apart in Karachi.`
-const HOME_HOVER_TEXT_CONTENT_3 = `A gathering, housed in a downloadable zipped folder.`
 
 const Home = () => {
   const [showText, setShowText] = useState(false);
@@ -60,22 +54,13 @@ const Home = () => {
             onMouseOver={() => setShowText(true)}
             onMouseLeave={() => setShowText(false)}
           >
-            <StaticImage
-              src="../images/home_enter.png"
-              alt="Enter the world"
-              width={70}
-              height={85}
-              placeholder="fixed"
-            />
           </HomeEnterWrapper>
         </Link>
         
         {
           showText && (
             <HomeTextWrapper>
-              <HomeText style={{ fontStyle: 'italic' }}> {HOME_HOVER_TEXT_CONTENT} </HomeText>
-              <HomeText> {HOME_HOVER_TEXT_CONTENT_2} </HomeText>
-              <HomeText> {HOME_HOVER_TEXT_CONTENT_3} </HomeText>
+              <HomeText style={{ fontStyle: 'italic' }}> 404: NOT FOUND </HomeText>
             </HomeTextWrapper>
           )
         }

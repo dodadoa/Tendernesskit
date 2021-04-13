@@ -40,7 +40,7 @@ const AboutHeader = styled.h3`
   font-weight: 400;
   position: absolute;
   top: 0;
-  font-family: 'Spectral';
+  font-family: 'Spectral, Noto Sans';
   font-style: italic;
   color: #AEF26B;
 `
@@ -74,6 +74,13 @@ const AuthorText = styled.p`
   color: #22B573;
   margin-bottom: 200px;
 `
+const UrduText = styled.h1`
+  font-family: 'Noto Sans';
+  font-size: 12px;
+  font-weight: 200;
+  color: #22B573;
+  margin-left: 10px;
+`
 const ContributorsText = styled.p`
   font-family: 'Spectral';
   color: #22B573;
@@ -98,6 +105,10 @@ const ContentText = styled.p`
   font-family: 'Spectral';
   font-size: 14px;
 `
+const TextWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+`
 
 const About = () => {
   return (
@@ -110,7 +121,10 @@ const About = () => {
           </LeftHeaderWrapper>
           <MidHeaderWrapper>
             <TendernessKitText>tenderness kit </TendernessKitText>
-            <AuthorText>A project by سراب</AuthorText>
+            <TextWrapper>
+              <AuthorText>A project by</AuthorText>
+              <UrduText>سراب</UrduText>
+            </TextWrapper>
             <ContributorByText> Contributions by: </ContributorByText>
             {
               [
