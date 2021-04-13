@@ -5,7 +5,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import PageTransition from 'gatsby-plugin-page-transitions'
 
 const FrontPageBackground = styled.div`
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
@@ -19,7 +19,6 @@ const FrontPageBackground = styled.div`
     radial-gradient(circle at 50% 50%, #fffcfc, #fffcfc 100%);
   width: 100%;
   height: 100%;
-  position: absolute; 
 `
 
 const HomeEnterWrapper = styled.div`

@@ -4,7 +4,7 @@ import PageTransition from 'gatsby-plugin-page-transitions'
 import { Link } from "gatsby"
 
 const FrontPageBackground = styled.div`
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
@@ -19,7 +19,6 @@ const FrontPageBackground = styled.div`
     radial-gradient(circle at 50% 50%, #ffffff, #ffffff 100%);
   width: 100%;
   height: 100%;
-  position: fixed; 
 `
 const Wrapper = styled.div`
   width: 90%;

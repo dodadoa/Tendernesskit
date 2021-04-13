@@ -5,7 +5,7 @@ import fishGarden from "../images/fish_garden.gif"
 import { Link } from "gatsby"
 
 const Background = styled.div`
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   margin: 0;
@@ -33,19 +33,6 @@ const FishGardenWrapper = styled.div`
   left: calc(50%);
   width: 500px;
 `
-const AboutText = styled.p`
-  font-size: 14px;
-  font-style: italic;
-  color: #97e384;
-  font-family: 'Spectral';
-  position: relative;
-  top: 40px;
-  left: 10px;
-  text-decoration: none;
-  &:hover{
-    text-decoration: none;
-  }
-`
 
 const AboutWrapper = styled.div`
   margin: 0;
@@ -57,6 +44,19 @@ const AboutWrapper = styled.div`
   &:hover {
     cursor: pointer;
   }
+`
+const AboutText = styled.p`
+  font-size: 14px;
+  font-style: italic;
+  color: #97e384;
+  font-family: 'Spectral';
+  position: relative;
+  top: 33px;
+  left: 20px;
+  text-decoration: none;
+  &:hover{
+    text-decoration: none;
+  } 
 `
 
 const BioWrapper = styled.div`
@@ -98,7 +98,7 @@ const DownloadText = styled.a`
   font-family: 'Spectral';
   position: relative;
   text-decoration: none;
-  top: 40px;
+  top: 35px;
   left: 30px;
 `
 
