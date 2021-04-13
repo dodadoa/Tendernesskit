@@ -21,10 +21,10 @@ const FrontPageBackground = styled.div`
 `
 
 const pondStyle = {
-  width: '1200px',
-  position: 'relative',
-  bottom: '50px',
-  left: '150px'
+  height: '800px',
+  position: 'absolute',
+  top: '-100px',
+  right: '50px'
 }
 
 const FishWrapper = styled.div`
