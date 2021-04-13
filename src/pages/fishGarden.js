@@ -119,7 +119,7 @@ const FishGarden = () => {
             >
               {
                 aboutText  && (
-                  <AboutText>About</AboutText>
+                  <AboutText>about</AboutText>
                 )
               }
             </AboutWrapper>
@@ -131,7 +131,7 @@ const FishGarden = () => {
             >
               {
                 bioText  && (
-                  <BioText>Bio</BioText>
+                  <BioText>bio</BioText>
                 )
               }
             </BioWrapper>
@@ -143,7 +143,7 @@ const FishGarden = () => {
             {
               downloadText  && (
                 <DownloadText href={'download.zip'} download>
-                  Download
+                  DOWNLOAD
                 </DownloadText>
               )
             }
