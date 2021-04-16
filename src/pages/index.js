@@ -42,7 +42,9 @@ const HomeText = styled.p`
   font-size: 14px;
   color: white;
   font-family: 'Spectral';
-  line-height: 16px;
+  line-height: 15px;
+  margin-bottom: 0px;
+  margin-top: 10px;
 `
 const HOME_HOVER_TEXT_CONTENT =`tenderness kit~`
 const HOME_HOVER_TEXT_CONTENT_2 = `A collection of meditations, mediations, conjurings,
@@ -50,7 +52,7 @@ and reflections on being together, while apart in Karachi.`
 const HOME_HOVER_TEXT_CONTENT_3 = `A gathering, housed in a downloadable zipped folder.`
 
 const Home = () => {
-  const [showText, setShowText] = useState(false);
+  const [showText, setShowText] = useState(true);
 
   return (
     <Layout title="Home">

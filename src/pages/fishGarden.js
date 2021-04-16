@@ -30,9 +30,9 @@ const Background = styled.div`
 
 const FishGardenWrapper = styled.div`
   position: absolute;
-  top: calc(50% - 150px);
-  left: calc(50%);
-  width: 500px;
+  top: calc(50% - 220px);
+  left: calc(50% - 100px);
+  width: 600px;
 `
 
 const AboutWrapper = styled.div`
@@ -40,20 +40,20 @@ const AboutWrapper = styled.div`
   width: 135px;
   height: 100px;
   position: relative;
-  left: 330px;
-  top: -280px;
+  left: 380px;
+  top: -300px;
   &:hover {
     cursor: pointer;
   }
 `
 const AboutText = styled.p`
-  font-size: 14px;
+  font-size: 15px;
   font-style: italic;
   color: #97e384;
   font-family: 'Spectral';
   position: relative;
-  top: 33px;
-  left: 20px;
+  top: 13px;
+  left: 43px;
   text-decoration: none;
   &:hover{
     text-decoration: none;
@@ -63,22 +63,22 @@ const AboutText = styled.p`
 const BioWrapper = styled.div`
   margin: 0;
   width: 85px;
-  height: 100px;
+  height: 120px;
   position: relative;
   left: 10px;
-  top: -410px;
+  top: -440px;
   &:hover {
     cursor: pointer;
   }
 `
 const BioText = styled.p`
-  font-size: 14px;
+  font-size: 15px;
   font-style: italic;
   color: #97e384;
   font-family: 'Spectral';
   position: relative;
   top: 60px;
-  left: 15px;
+  left: 30px;
 `
 
 const DownloadWrapper = styled.div`
@@ -86,8 +86,8 @@ const DownloadWrapper = styled.div`
   width: 200px;
   height: 100px;
   position: relative;
-  left: 280px;
-  top: -360px;
+  left: 310px;
+  top: -400px;
   &:hover {
     cursor: pointer;
   }
@@ -99,8 +99,8 @@ const DownloadText = styled.a`
   font-family: 'Spectral';
   position: relative;
   text-decoration: none;
-  top: 35px;
-  left: 25px;
+  top: 40px;
+  left: 60px;
 `
 
 const PondWrapper = styled.div`
@@ -126,7 +126,7 @@ const FishGarden = () => {
       <PageTransition>
         <Background>
           <FishGardenWrapper>
-            <img style={{ width: '500px' }} src={fishGarden} alt="fish garden" />
+            <img style={{ width: '600px' }} src={fishGarden} alt="fish garden" />
             <Link to="/pond">
               <PondWrapper />
             </Link>

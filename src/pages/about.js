@@ -87,7 +87,7 @@ const UrduText = styled.h1`
 const ContributorsText = styled.p`
   font-family: 'Spectral';
   color: #22B573;
-  font-size: 14px;
+  font-size: 12px;
   margin: 0px;
 `
 const ContributorByText = styled(ContributorsText)`
@@ -98,7 +98,7 @@ const ContributorByText = styled(ContributorsText)`
 const Content = styled.div`
   width: 500px;
   margin-right: 100px;
-  margin-top: 200px;
+  margin-top: 120px;
   background: -webkit-linear-gradient(#43D15E, #11B783, #8CC63F, #11B783);
   background-clip: text;
   -webkit-background-clip: text;
@@ -106,7 +106,7 @@ const Content = styled.div`
 `
 const ContentText = styled.p`
   font-family: 'Spectral';
-  font-size: 14px;
+  font-size: 12px;
 `
 const TextWrapper = styled.div`
   display: flex;
@@ -148,6 +148,15 @@ const About = () => {
               <ContentText>A collection of meditations, mediations, conjurings, and reflections on being together, while apart in Karachi. </ContentText>
               <ContentText> Over the last year, as we learned and practiced new rules of social distancing, we were confronted with a new form of interiority. Borders hardened around us: not just of the nation-state, but borders that relegate us to home and family. In these moments, we found ourselves disconnecting from our bodies, and from the new realities that were our present. As the world moved online, distances grew and expanded between us and the communities we inhabit. </ContentText>
               <ContentText> The tenderness kit emerged from a desire to share and exchange our collective present, experienced differently by each of us. Using our sensual registers and the power of the erotic, we hoped to return to our own bodies, and by extension to each other. It is a coming together of sorts, housed in a downloadable zipped folder.</ContentText>
+              <ContentText style={{ marginTop: '36px' }}>
+                Supported by Indus Valley School of Art and Architecture.
+                <br/><br/>
+                Webdesign by Jeanne Penjan Lassus
+                <br/>
+                Coding by Tewprai Bualoi & Wasawat Somno 
+                <br/>
+                Animation by Tewprai Bualoi
+              </ContentText>
             </Content>
           </Wrapper>
         </FrontPageBackground>

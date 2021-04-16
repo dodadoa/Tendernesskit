@@ -84,11 +84,11 @@ const UrduText = styled.h1`
 const Content = styled.div`
   width: 500px;
   margin-right: 100px;
-  margin-top: 10%;
+  margin-top: 15%;
 `
 const ContentText = styled.p`
   font-family: 'Spectral';
-  font-size: 14px;
+  font-size: 12px;
   color: #F69995;
 `
 
