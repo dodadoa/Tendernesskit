@@ -107,10 +107,10 @@ const PondWrapper = styled.div`
   width: 30px;
   height: 30px;
   margin: 0;
-  left: 180px;
-  top: -300px;
+  left: 230px;
+  top: -350px;
   position: relative;
-  /* background-color: black; */
+  /* background-color: rgba(0,0,0,0.3); */
   &:hover {
     cursor: pointer;
   }

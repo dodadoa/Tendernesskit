@@ -19,23 +19,29 @@ const FrontPageBackground = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
 `
+const Wrapper = styled.div`
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+`
 
 const pondStyle = {
-  height: '800px',
+  height: '750px',
   position: 'absolute',
-  top: '-100px',
-  right: '50px'
+  top: '-50px',
+  left: '50px'
 }
 
 const FishWrapper = styled.div`
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   margin: 0;
-  left: 330px;
-  top: 550px;
+  top: 620px;
+  left: 230px;
   position: absolute;
   z-index: 999;
-  /* background-color: black; */
+  /* background-color: rgba(0,0,0,0.3); */
   &:hover {
     cursor: pointer;
   }
@@ -46,10 +52,12 @@ const Pond = () => {
     <Layout title="pond">
       <PageTransition>
         <FrontPageBackground>
-          <Link to="/fishGarden">
-            <FishWrapper />
-          </Link>
-          <img style={pondStyle} src={pond} alt="pond" />
+          <Wrapper>
+            <Link to="/fishGarden">
+              <FishWrapper />
+            </Link>
+            <img style={pondStyle} src={pond} alt="pond" />
+          </Wrapper>
         </FrontPageBackground>
       </PageTransition>
     </Layout>
