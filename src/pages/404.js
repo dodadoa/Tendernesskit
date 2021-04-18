@@ -49,7 +49,7 @@ const NotFound = () => {
   return (
     <PageTransition>
       <FrontPageBackground>
-        <Link to="/fishGarden">
+        <Link to="/home">
           <NotFoundEnterWrapper
             onMouseOver={() => setShowText(true)}
             onMouseLeave={() => setShowText(false)}

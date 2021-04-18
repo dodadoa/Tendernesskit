@@ -36,7 +36,7 @@ const HomeTextWrapper = styled.div`
   width: 400px;
   position: relative;
   left: calc(50% + 70px);
-  top: calc(50% - 115px);
+  top: calc(50% - 110px);
 `
 const HomeText = styled.p`
   font-size: 14px;
@@ -52,13 +52,13 @@ and reflections on being together, while apart in Karachi.`
 const HOME_HOVER_TEXT_CONTENT_3 = `A gathering, housed in a downloadable zipped folder.`
 
 const Home = () => {
-  const [showText, setShowText] = useState(true);
+  const [showText, setShowText] = useState(false);
 
   return (
     <Layout title="Home">
       <PageTransition>
         <FrontPageBackground>
-          <Link to="/fishGarden">
+          <Link to="/home">
             <HomeEnterWrapper
               onMouseOver={() => setShowText(true)}
               onMouseLeave={() => setShowText(false)}

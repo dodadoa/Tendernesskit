@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import styled from "@emotion/styled"
 import PageTransition from 'gatsby-plugin-page-transitions'
 import fishGarden from "../images/fish_garden.gif"
-import { Link } from "gatsby"
+import { navigate } from "gatsby"
 import Layout from "../components/layout"
 
 const Background = styled.div`
@@ -77,7 +77,7 @@ const BioText = styled.p`
   color: #97e384;
   font-family: 'Spectral';
   position: relative;
-  top: 60px;
+  top: 57px;
   left: 30px;
 `
 
@@ -101,6 +101,9 @@ const DownloadText = styled.a`
   text-decoration: none;
   top: 40px;
   left: 60px;
+  &:hover {
+    cursor: pointer;
+  }
 `
 
 const PondWrapper = styled.div`
@@ -127,33 +130,29 @@ const FishGarden = () => {
         <Background>
           <FishGardenWrapper>
             <img style={{ width: '600px' }} src={fishGarden} alt="fish garden" />
-            <Link to="/pond">
-              <PondWrapper />
-            </Link>
-            <Link style={{ textDecoration: 'none' }} to="/about">
-              <AboutWrapper
-                onMouseOver={() => setShowAboutText(true)}
-                onMouseLeave={() => setShowAboutText(false)}
-              >
-                {
-                  aboutText  && (
-                    <AboutText>about</AboutText>
-                  )
-                }
-              </AboutWrapper>
-            </Link>
-            <Link style={{ textDecoration: 'none' }} to="/bio">
-              <BioWrapper
-                onMouseOver={() => setShowBioText(true)}
-                onMouseLeave={() => setShowBioText(false)}
-              >
-                {
-                  bioText  && (
-                    <BioText>bio</BioText>
-                  )
-                }
-              </BioWrapper>
-            </Link>
+            <PondWrapper onClick={() => navigate('/pond')}/>
+            <AboutWrapper
+              onMouseOver={() => setShowAboutText(true)}
+              onMouseLeave={() => setShowAboutText(false)}
+              onClick={() => navigate('/about')}
+            >
+              {
+                aboutText  && (
+                  <AboutText>about</AboutText>
+                )
+              }
+            </AboutWrapper>
+            <BioWrapper
+              onMouseOver={() => setShowBioText(true)}
+              onMouseLeave={() => setShowBioText(false)}
+              onClick={() => navigate('/bio')}
+            >
+              {
+                bioText  && (
+                  <BioText>bio</BioText>
+                )
+              }
+            </BioWrapper>
             <DownloadWrapper
               onMouseOver={() => setShowDownloadText(true)}
               onMouseLeave={() => setShowDownloadText(false)}

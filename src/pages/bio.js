@@ -54,6 +54,9 @@ const BackLink = styled.p`
   font-size: 18px;
   font-family: 'Spectral';
   color: #F69995;
+  &:hover {
+    cursor: pointer;
+  }
 `
 
 const MidHeaderWrapper = styled.div`
@@ -100,7 +103,7 @@ const Bio = () => {
           <Wrapper>
             <LeftHeaderWrapper>
               <AboutHeader>bio</AboutHeader>
-              <Link style={{ textDecoration: 'none' }} to="/fishGarden">
+              <Link style={{ textDecoration: 'none' }} to="/home">
                 <BackLink>
                   <FontAwesomeIcon style={{ fontSize: '12px', marginRight: '10px' }} icon={faArrowLeft}/>
                   back
