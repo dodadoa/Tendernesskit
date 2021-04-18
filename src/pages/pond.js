@@ -30,7 +30,7 @@ const pondStyle = {
   height: '750px',
   position: 'absolute',
   top: '-50px',
-  left: '65px'
+  left: '30px'
 }
 
 const FishWrapper = styled.div`
@@ -38,7 +38,7 @@ const FishWrapper = styled.div`
   height: 50px;
   margin: 0;
   top: 620px;
-  left: 245px;
+  left: 210px;
   position: absolute;
   z-index: 999;
   /* background-color: rgba(0,0,0,0.3); */
