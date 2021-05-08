@@ -36,19 +36,56 @@ const Layout = ({ description, lang, meta, title, children  }) => {
       top: 0;
       left: 0;
       margin: 0;
-      background-image: linear-gradient(to bottom, #9e9e, #eee);
+      background-image: linear-gradient(to bottom, #CCFFC7, #DFDAD2);
       width: 100%;
       height: 100%;
     `
+    const Circle = styled.div`
+      text-align: center;
+      width: 60px;
+      height: 60px;
+      border: 0.7px solid #4AA80E;
+      border-radius: 50%;
+    `
+    const IIcon = styled.div`
+      color: #4AA80E;
+      font-family: 'Spectral';
+      font-weight: 400;
+      font-style: italic;
+      font-size: 40px;
+    `
     return (
       <FrontPageBackground>
+        <div style={{
+          width: '100%',
+          marginTop: '15%',
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'center',
+        }}>
+          <Circle>
+            <IIcon> i </IIcon>
+          </Circle>
+        </div>
+        <h1 style={{
+          textAlign: 'center',
+          width: '100%',
+          fontFamily: 'Spectral',
+          fontSize: '25px',
+          color: '#4AA80E',
+          fontWeight: 400,
+          marginTop: '40px'
+        }}> for a better experience of website </h1>
         <p style={{
           textAlign: 'center',
           width: '100%',
           fontFamily: 'Spectral',
-          fontSize: '20px'
+          fontSize: '15px',
+          color: '#4AA80E',
+          lineHeight: '20px'
         }}>
-          please use chrome in desktop for fully experienced
+          please use a different browser <i>(recent versions of Chrome or Firefox)</i> <br/>
+          on a desktop computer rather than on a phone
         </p>
       </FrontPageBackground>
     )
