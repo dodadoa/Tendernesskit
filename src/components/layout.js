@@ -27,8 +27,9 @@ const Layout = ({ description, lang, meta, title, children  }) => {
 
   const browser = detect()
   console.log(browser)
-  const isChrome = browser.name === 'chrome'
-  if (!isChrome) {
+  const isSafari = browser.name === 'safari'
+  const isFirefox = browser.name === 'firefox'
+  if (isSafari || isFirefox) {
     const FrontPageBackground = styled.div`
       position: fixed;
       width: 100%;
