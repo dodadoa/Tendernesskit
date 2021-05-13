@@ -76,7 +76,7 @@ const Layout = ({ description, lang, meta, title, children  }) => {
           color: '#4AA80E',
           fontWeight: 400,
           marginTop: '40px'
-        }}> for a better experience of website </h1>
+        }}> for a better experience of the website </h1>
         <p style={{
           textAlign: 'center',
           width: '100%',
