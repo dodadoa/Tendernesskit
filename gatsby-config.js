@@ -3,6 +3,7 @@ module.exports = {
     title: `Tenderness Kit `,
     description: `tendernesskit.com`,
     author: `wasawat and tewprai and co`,
+    version: `0.1`
   },
   plugins: [
     `gatsby-plugin-emotion`,

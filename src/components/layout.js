@@ -16,17 +16,19 @@ const Layout = ({ description, lang, meta, title, children  }) => {
             title
             description
             author
+            version
           }
         }
       }
     `
   )
 
+  console.log(`version: ${site.version}`)
+
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
 
   const browser = detect()
-  console.log(browser)
   const isSafari = browser.name === 'safari'
   const isFirefox = browser.name === 'firefox'
   if (isSafari || isFirefox) {
