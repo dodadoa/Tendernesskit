@@ -23,7 +23,7 @@ const Layout = ({ description, lang, meta, title, children  }) => {
     `
   )
 
-  console.log(`version: ${site.version}`)
+  console.log(`version: ${site.steMetadata.version || '0.01'}`)
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
