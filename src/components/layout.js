@@ -11,6 +11,32 @@ const browser = detect()
 const isSafari = browser.name === 'safari'
 const isFirefox = browser.name === 'firefox'
 
+const FrontPageBackground = styled.div`
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  background-image: linear-gradient(to bottom, #CCFFC7, #DFDAD2);
+  width: 100%;
+  height: 100%;
+`
+const Circle = styled.div`
+  text-align: center;
+  width: 60px;
+  height: 60px;
+  border: 0.7px solid #4AA80E;
+  border-radius: 50%;
+`
+const IIcon = styled.div`
+  color: #4AA80E;
+  font-family: 'Spectral';
+  font-weight: 400;
+  font-style: italic;
+  font-size: 40px;
+`
+
 const Layout = ({ description, lang, meta, title, children  }) => {
   const { site } = useStaticQuery(
     graphql`
@@ -33,31 +59,6 @@ const Layout = ({ description, lang, meta, title, children  }) => {
   const defaultTitle = site.siteMetadata?.title
 
   if (isSafari || isFirefox) {
-    const FrontPageBackground = styled.div`
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      margin: 0;
-      background-image: linear-gradient(to bottom, #CCFFC7, #DFDAD2);
-      width: 100%;
-      height: 100%;
-    `
-    const Circle = styled.div`
-      text-align: center;
-      width: 60px;
-      height: 60px;
-      border: 0.7px solid #4AA80E;
-      border-radius: 50%;
-    `
-    const IIcon = styled.div`
-      color: #4AA80E;
-      font-family: 'Spectral';
-      font-weight: 400;
-      font-style: italic;
-      font-size: 40px;
-    `
     return (
       <FrontPageBackground>
         <div style={{
