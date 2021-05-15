@@ -50,7 +50,7 @@ const Layout = ({ description, lang, meta, title, children  }) => {
   )
 
   const [isLoad, setIsLoad] = useState(false)
-  const [isChrome, setIsChrome] = useState(false)
+  const [isChromeOrFirefox, setIsChromeOrFirefox] = useState(false)
 
   console.log(`version: ${site.siteMetadata ? site.siteMetadata.version : '0.01'}`)
 
@@ -59,8 +59,8 @@ const Layout = ({ description, lang, meta, title, children  }) => {
 
   useEffect(() => {
     const browser = detect()
-    const isChrome = browser.name === 'chrome'
-    setIsChrome(isChrome)
+    const checkChromeOrFirefox = browser.name === 'chrome' || browser.name === 'firefox'
+    setIsChromeOrFirefox(checkChromeOrFirefox)
     setIsLoad(true)
   }, [])
 
@@ -72,7 +72,7 @@ const Layout = ({ description, lang, meta, title, children  }) => {
     )
   }
 
-  if (!isChrome) {
+  if (!isChromeOrFirefox) {
     return (
       <FrontPageBackground>
         <div style={{
