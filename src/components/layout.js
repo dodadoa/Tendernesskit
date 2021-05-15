@@ -8,8 +8,7 @@ import { Helmet } from 'react-helmet'
 import thumbnail from '../images/thumbnail.png'
 
 const browser = detect()
-const isSafari = browser.name === 'safari'
-const isFirefox = browser.name === 'firefox'
+const isChrome = browser.name === 'chrome'
 
 const FrontPageBackground = styled.div`
   position: fixed;
@@ -58,7 +57,7 @@ const Layout = ({ description, lang, meta, title, children  }) => {
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
 
-  if (isSafari || isFirefox) {
+  if (!isChrome) {
     return (
       <FrontPageBackground>
         <div style={{
