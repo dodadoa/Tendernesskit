@@ -7,6 +7,10 @@ import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import thumbnail from '../images/thumbnail.png'
 
+const browser = detect()
+const isSafari = browser.name === 'safari'
+const isFirefox = browser.name === 'firefox'
+
 const Layout = ({ description, lang, meta, title, children  }) => {
   const { site } = useStaticQuery(
     graphql`
@@ -28,9 +32,6 @@ const Layout = ({ description, lang, meta, title, children  }) => {
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
 
-  const browser = detect()
-  const isSafari = browser.name === 'safari'
-  const isFirefox = browser.name === 'firefox'
   if (isSafari || isFirefox) {
     const FrontPageBackground = styled.div`
       position: fixed;
