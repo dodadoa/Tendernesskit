@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { useState, useEffect } from 'react'
 import './layout.css'
 import styled from "@emotion/styled"
 import { useStaticQuery, graphql } from 'gatsby'
@@ -6,9 +6,6 @@ import { detect } from 'detect-browser'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import thumbnail from '../images/thumbnail.png'
-
-const browser = detect()
-const isChrome = browser.name === 'chrome'
 
 const FrontPageBackground = styled.div`
   position: fixed;
@@ -52,10 +49,28 @@ const Layout = ({ description, lang, meta, title, children  }) => {
     `
   )
 
+  const [isLoad, setIsLoad] = useState(false)
+  const [isChrome, setIsChrome] = useState(false)
+
   console.log(`version: ${site.siteMetadata ? site.siteMetadata.version : '0.01'}`)
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
+
+  useEffect(() => {
+    const browser = detect()
+    const isChrome = browser.name === 'chrome'
+    setIsChrome(isChrome)
+    setIsLoad(true)
+  }, [])
+
+  if(!isLoad) {
+    return (
+      <FrontPageBackground>
+
+      </FrontPageBackground>
+    )
+  }
 
   if (!isChrome) {
     return (
