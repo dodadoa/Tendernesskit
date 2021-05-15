@@ -159,7 +159,7 @@ const FishGarden = () => {
             >
               {
                 downloadText  && (
-                  <DownloadText href={'https://onedrive.live.com/embed?cid=951EE174AFD33C0C&resid=951EE174AFD33C0C%21109&authkey=APFys6LGRJGFm7k'} download>
+                  <DownloadText href={'https://onedrive.live.com/download?cid=951EE174AFD33C0C&resid=951EE174AFD33C0C%21109&authkey=APFys6LGRJGFm7k'} download>
                     DOWNLOAD
                   </DownloadText>
                 )
