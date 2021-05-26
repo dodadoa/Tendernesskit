@@ -24,19 +24,23 @@ export default function HTML(props) {
       </body>
       <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
       <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-analytics.js"></script>
-      <script>
-        const firebaseConfig = {
-          apiKey: "AIzaSyB1N_cqSRDqq4NH54sV2g6yfMBDTD4CIiA",
-          authDomain: "tendernesskit.firebaseapp.com",
-          projectId: "tendernesskit",
-          storageBucket: "tendernesskit.appspot.com",
-          messagingSenderId: "797975857976",
-          appId: "1:797975857976:web:4615b5cdbd5fda6ea7cfcd",
-          measurementId: "G-JL04L7JV61"
-        };
-        firebase.initializeApp(firebaseConfig);
-        firebase.analytics();
-      </script>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            const firebaseConfig = {
+              apiKey: "AIzaSyB1N_cqSRDqq4NH54sV2g6yfMBDTD4CIiA",
+              authDomain: "tendernesskit.firebaseapp.com",
+              projectId: "tendernesskit",
+              storageBucket: "tendernesskit.appspot.com",
+              messagingSenderId: "797975857976",
+              appId: "1:797975857976:web:4615b5cdbd5fda6ea7cfcd",
+              measurementId: "G-JL04L7JV61"
+            };
+            firebase.initializeApp(firebaseConfig);
+            firebase.analytics();
+          `, 
+        }}
+      />
     </html>
   )
 }
