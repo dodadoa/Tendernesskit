@@ -124,6 +124,10 @@ const FishGarden = () => {
   const [bioText, setShowBioText] = useState(false)
   const [downloadText, setShowDownloadText] = useState(false)
 
+  const handleClickDownload = () => {
+    analytics.logEvent('download_content');
+  }
+
   return (
     <Layout title="Garden">
       <PageTransition>
@@ -159,7 +163,7 @@ const FishGarden = () => {
             >
               {
                 downloadText  && (
-                  <DownloadText href={'https://onedrive.live.com/download?cid=951EE174AFD33C0C&resid=951EE174AFD33C0C%21109&authkey=APFys6LGRJGFm7k'} download>
+                  <DownloadText onClick={handleClickDownload} href={'https://onedrive.live.com/download?cid=951EE174AFD33C0C&resid=951EE174AFD33C0C%21109&authkey=APFys6LGRJGFm7k'} download>
                     DOWNLOAD
                   </DownloadText>
                 )
