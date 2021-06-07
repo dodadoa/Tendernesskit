@@ -52,8 +52,6 @@ const Layout = ({ description, lang, meta, title, children  }) => {
   const [isLoad, setIsLoad] = useState(false)
   const [isChromeOrFirefox, setIsChromeOrFirefox] = useState(false)
 
-  console.log(`version: ${site.siteMetadata ? site.siteMetadata.version : '0.01'}`)
-
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
 
