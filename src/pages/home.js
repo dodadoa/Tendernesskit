@@ -5,6 +5,8 @@ import fishGarden from "../images/fish_garden.gif"
 import { navigate } from "gatsby"
 import Layout from "../components/layout"
 import { getFirebase } from '../firebase'
+import firebaseApp from 'firebase/app'
+import 'firebase/analytics'
 
 const Background = styled.div`
   position: fixed;
@@ -126,7 +128,7 @@ const FishGarden = () => {
   const [downloadText, setShowDownloadText] = useState(false)
 
   const handleClickDownload = () => {
-    const firebase = getFirebase()
+    const firebase = getFirebase(firebaseApp)
     const analytics = firebase.analytics()
     analytics.logEvent('download_content');
   }
