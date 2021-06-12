@@ -6,6 +6,21 @@ import { detect } from 'detect-browser'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import thumbnail from '../images/thumbnail.png'
+import firebase from "firebase/app"
+import "firebase/analytics"
+
+
+const firebaseConfig = {
+  apiKey: "AIzaSyB1N_cqSRDqq4NH54sV2g6yfMBDTD4CIiA",
+  authDomain: "tendernesskit.firebaseapp.com",
+  projectId: "tendernesskit",
+  storageBucket: "tendernesskit.appspot.com",
+  messagingSenderId: "797975857976",
+  appId: "1:797975857976:web:4615b5cdbd5fda6ea7cfcd",
+  measurementId: "G-JL04L7JV61"
+};
+
+firebase.initializeApp(firebaseConfig);
 
 const FrontPageBackground = styled.div`
   position: fixed;
