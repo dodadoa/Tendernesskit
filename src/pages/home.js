@@ -1,11 +1,10 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import styled from "@emotion/styled"
 import PageTransition from 'gatsby-plugin-page-transitions'
 import fishGarden from "../images/fish_garden.gif"
 import { navigate } from "gatsby"
 import Layout from "../components/layout"
-import firebase from "firebase/app"
-import "firebase/analytics";
+import { getFirebase } from '../firebase'
 
 const Background = styled.div`
   position: fixed;
@@ -127,7 +126,8 @@ const FishGarden = () => {
   const [downloadText, setShowDownloadText] = useState(false)
 
   const handleClickDownload = () => {
-    const analytics = firebase.analytics();
+    const firebase = getFirebase()
+    const analytics = firebase.analytics()
     analytics.logEvent('download_content');
   }
 
