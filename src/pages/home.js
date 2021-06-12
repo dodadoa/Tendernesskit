@@ -4,6 +4,7 @@ import PageTransition from 'gatsby-plugin-page-transitions'
 import fishGarden from "../images/fish_garden.gif"
 import { navigate } from "gatsby"
 import Layout from "../components/layout"
+import { getAnalytics, logEvent } from "firebase/analytics";
 
 const Background = styled.div`
   position: fixed;
@@ -124,8 +125,10 @@ const FishGarden = () => {
   const [bioText, setShowBioText] = useState(false)
   const [downloadText, setShowDownloadText] = useState(false)
 
+  const analytics = getAnalytics();
+
   const handleClickDownload = () => {
-    analytics.logEvent('download_content');
+    logEvent(analytics, 'download_content');
   }
 
   return (

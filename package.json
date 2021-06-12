@@ -20,6 +20,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
     "detect-browser": "^5.2.0",
+    "firebase": "^8.6.7",
     "gatsby": "^3.1.2",
     "gatsby-plugin-emotion": "^6.2.0",
     "gatsby-plugin-fontawesome-css": "^1.1.0",
