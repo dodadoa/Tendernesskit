@@ -118,15 +118,15 @@ const TextWrapper = styled.div`
 
 const About = () => {
   return (
-    <Layout title="about">
-      <PageTransition transitionTime={500}>
+    <PageTransition>
+      <Layout title="about">
         <FrontPageBackground>
           <Wrapper>
             <LeftHeaderWrapper>
               <AboutHeader>about</AboutHeader>
               <Link style={{ textDecoration: 'none' }} to="/home">
                 <BackLink>
-                  <FontAwesomeIcon style={{ fontSize: '12px', marginRight: '10px' }} icon={faArrowLeft}/>
+                  <FontAwesomeIcon style={{ fontSize: '12px', marginRight: '10px' }} icon={faArrowLeft} />
                   back
                 </BackLink>
               </Link>
@@ -145,7 +145,7 @@ const About = () => {
                   'Shayan Rajani', 'Sohail Abdullah', 'Zahra Malkani'
                 ].map((contributor) => (<ContributorsText>{contributor}</ContributorsText>))
               }
-  
+
             </MidHeaderWrapper>
             <Content>
               <ContentText>A collection of meditations, mediations, conjurings, and reflections on being together, while apart in Karachi. </ContentText>
@@ -153,18 +153,18 @@ const About = () => {
               <ContentText> The tenderness kit emerged from a desire to share and exchange our collective present, experienced differently by each of us. Using our sensual registers and the power of the erotic, we hoped to return to our own bodies, and by extension to each other. It is a coming together of sorts, housed in a downloadable zipped folder.</ContentText>
               <ContentText style={{ marginTop: '36px' }}>
                 Supported by Indus Valley School of Art and Architecture.
-                <br/><br/>
+                <br /><br />
                 Webdesign by Jeanne Penjan Lassus
-                <br/>
-                Coding by Tewprai Bualoi & Wasawat Somno 
-                <br/>
+                <br />
+                Coding by Tewprai Bualoi & Wasawat Somno
+                <br />
                 Animation by Tewprai Bualoi
               </ContentText>
             </Content>
           </Wrapper>
         </FrontPageBackground>
-      </PageTransition>
-    </Layout>
+      </Layout>
+    </PageTransition>
   )
 }
 

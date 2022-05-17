@@ -97,15 +97,15 @@ const ContentText = styled.p`
 
 const Bio = () => {
   return (
-    <Layout title="bio">
-      <PageTransition>
+    <PageTransition>
+      <Layout title="bio">
         <FrontPageBackground>
           <Wrapper>
             <LeftHeaderWrapper>
               <AboutHeader>bio</AboutHeader>
               <Link style={{ textDecoration: 'none' }} to="/home">
                 <BackLink>
-                  <FontAwesomeIcon style={{ fontSize: '12px', marginRight: '10px' }} icon={faArrowLeft}/>
+                  <FontAwesomeIcon style={{ fontSize: '12px', marginRight: '10px' }} icon={faArrowLeft} />
                   back
                 </BackLink>
               </Link>
@@ -123,8 +123,8 @@ const Bio = () => {
             </Content>
           </Wrapper>
         </FrontPageBackground>
-      </PageTransition>
-    </Layout>
+      </Layout>
+    </PageTransition>
   )
 }
 

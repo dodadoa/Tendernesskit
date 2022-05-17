@@ -49,8 +49,8 @@ const FishWrapper = styled.div`
 
 const Pond = () => {
   return (
-    <Layout title="pond">
-      <PageTransition>
+    <PageTransition>
+      <Layout title="pond">
         <FrontPageBackground>
           <Wrapper>
             <Link to="/home">
@@ -59,8 +59,8 @@ const Pond = () => {
             <img style={pondStyle} src={pond} alt="pond" />
           </Wrapper>
         </FrontPageBackground>
-      </PageTransition>
-    </Layout>
+      </Layout>
+    </PageTransition>
   )
 }
 

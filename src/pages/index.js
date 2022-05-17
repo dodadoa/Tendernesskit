@@ -46,7 +46,7 @@ const HomeText = styled.p`
   margin-bottom: 0px;
   margin-top: 10px;
 `
-const HOME_HOVER_TEXT_CONTENT =`tenderness kit~`
+const HOME_HOVER_TEXT_CONTENT = `tenderness kit~`
 const HOME_HOVER_TEXT_CONTENT_2 = `A collection of meditations, mediations, conjurings,
 and reflections on being together, while apart in Karachi.`
 const HOME_HOVER_TEXT_CONTENT_3 = `A gathering, housed in a downloadable zipped folder.`
@@ -55,8 +55,8 @@ const Home = () => {
   const [showText, setShowText] = useState(false);
 
   return (
-    <Layout title="Home">
-      <PageTransition>
+    <PageTransition>
+      <Layout title="Home">
         <FrontPageBackground>
           <Link to="/home">
             <HomeEnterWrapper
@@ -69,10 +69,11 @@ const Home = () => {
                 width={70}
                 height={85}
                 placeholder="fixed"
+                loading="eager"
               />
             </HomeEnterWrapper>
           </Link>
-          
+
           {
             showText && (
               <HomeTextWrapper>
@@ -83,8 +84,8 @@ const Home = () => {
             )
           }
         </FrontPageBackground>
-      </PageTransition>
-    </Layout>
+      </Layout>
+    </PageTransition>
   )
 }
 

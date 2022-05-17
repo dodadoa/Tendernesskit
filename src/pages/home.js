@@ -134,19 +134,19 @@ const FishGarden = () => {
   }
 
   return (
-    <Layout title="Garden">
-      <PageTransition>
+    <PageTransition>
+      <Layout title="Garden">
         <Background>
           <FishGardenWrapper>
             <img style={{ width: '600px' }} src={fishGarden} alt="fish garden" />
-            <PondWrapper onClick={() => navigate('/pond')}/>
+            <PondWrapper onClick={() => navigate('/pond')} />
             <AboutWrapper
               onMouseOver={() => setShowAboutText(true)}
               onMouseLeave={() => setShowAboutText(false)}
               onClick={() => navigate('/about')}
             >
               {
-                aboutText  && (
+                aboutText && (
                   <AboutText>about</AboutText>
                 )
               }
@@ -157,7 +157,7 @@ const FishGarden = () => {
               onClick={() => navigate('/bio')}
             >
               {
-                bioText  && (
+                bioText && (
                   <BioText>bio</BioText>
                 )
               }
@@ -167,7 +167,7 @@ const FishGarden = () => {
               onMouseLeave={() => setShowDownloadText(false)}
             >
               {
-                downloadText  && (
+                downloadText && (
                   <DownloadText onClick={handleClickDownload} href={'https://onedrive.live.com/download?cid=951EE174AFD33C0C&resid=951EE174AFD33C0C%21109&authkey=APFys6LGRJGFm7k'} download>
                     DOWNLOAD
                   </DownloadText>
@@ -176,8 +176,8 @@ const FishGarden = () => {
             </DownloadWrapper>
           </FishGardenWrapper>
         </Background>
-      </PageTransition>
-    </Layout>
+      </Layout>
+    </PageTransition>
   )
 }
 

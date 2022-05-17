@@ -33,7 +33,7 @@ const IIcon = styled.div`
   font-size: 40px;
 `
 
-const Layout = ({ description, lang, meta, title, children  }) => {
+const Layout = ({ description, lang, meta, title, children }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -62,7 +62,7 @@ const Layout = ({ description, lang, meta, title, children  }) => {
     setIsLoad(true)
   }, [])
 
-  if(!isLoad) {
+  if (!isLoad) {
     return (
       <FrontPageBackground>
 
@@ -101,7 +101,7 @@ const Layout = ({ description, lang, meta, title, children  }) => {
           color: '#4AA80E',
           lineHeight: '20px'
         }}>
-          please use a different browser <i>(recent versions of Chrome or Firefox)</i> <br/>
+          please use a different browser <i>(recent versions of Chrome or Firefox)</i> <br />
           on a desktop computer rather than on a phone
         </p>
       </FrontPageBackground>
